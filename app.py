@@ -229,7 +229,6 @@ def analytics():
         avg_res     = conn.execute("SELECT AVG((julianday(resolved_at)-julianday(submitted_at))*24) as avg_hours FROM complaints WHERE resolved_at IS NOT NULL").fetchone()
     return render_template('analytics.html', by_category=by_category, by_status=by_status,
                            by_priority=by_priority, recent=recent, avg_resolution=avg_res)
-import os
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
