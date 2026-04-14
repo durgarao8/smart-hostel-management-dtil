@@ -231,5 +231,7 @@ def analytics():
                            by_priority=by_priority, recent=recent, avg_resolution=avg_res)
 
 if __name__ == "__main__":
+    init_db()   # 🔥 VERY IMPORTANT
+    import os
     port = int(os.environ.get("PORT", 8080))
     app.run(host="0.0.0.0", port=port)
