@@ -5,7 +5,7 @@ from flask import Flask, render_template, request, redirect, url_for, session, j
 from werkzeug.utils import secure_filename
 app = Flask(__name__)
 app.secret_key = "lab_project_2026"
-init_db()   # ✅ ADD THIS LINE HE
+
 
 UPLOAD_FOLDER = 'static/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
